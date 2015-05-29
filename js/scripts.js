@@ -1,5 +1,20 @@
 var findAndReplace = function(string, original, replacement){
-  return string.split(original).join(replacement);
+  var puntuationList = [",", ".", "?", "!", "\"", "/"];
+
+  //cases where punctuation is at the end of a word
+  for(var i = 0; i < puntuationList.length; ++i){
+    string = string.split(original + puntuationList[i]).join(replacement + puntuationList[i]);
+  }
+
+  var wordList = string.split(" ");
+
+  for(var j = 0; j < wordList.length; ++j){
+    if(wordList[j] === original){
+      wordList[j] = replacement;
+    }
+  }
+
+  return wordList.join(" ");
 };
 
 $(document).ready(function(){
