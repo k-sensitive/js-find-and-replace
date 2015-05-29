@@ -11,16 +11,20 @@
     <div class= "container">
 
       <h1>Find and Replace</h1>
-      <form id= "input-form" >
-        <label for= "input-string"><h2>Enter Your Number Here</h2></label>
-        <input id= "input-string" name= "input-string" type="text">
+      <form id= "inputForm" >
+        <label for= "string">Enter in text:</label>
+        <input id= "string" name= "string" class="form-control" type="text">
+        <label for= "original">Enter the word you want to replace in this text:</label>
+        <input id= "original" name= "original" class="form-control" type="text">
+        <label for= "replacement">Enter the replacement word:</label>
+        <input id= "replacement" name= "replacement" class="form-control" type="text">
+        <br>
         <button type= "submit">Submit</button>
       </form>
-      <br><br>
       <br>
-
     <div id= "result">
-      <p id= "result-numeral"></p>
+      <h4>Here is your modified text:</h4>
+      <p id= "final"></p>
     </div>
   </body>
 </html>
