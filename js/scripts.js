@@ -1,13 +1,5 @@
 var findAndReplace = function(string, original, replacement){
-  var wordArray = string.split(" ");
-
-  for(var i = 0; i < wordArray.length; ++i){
-    if(wordArray[i] === original){
-      wordArray[i] = replacement;
-    }
-  }
-
-  return wordArray.join(" ");
+  return string.split(original).join(replacement);
 };
 
 $(document).ready(function(){
